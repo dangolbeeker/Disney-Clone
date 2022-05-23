@@ -1,0 +1,23 @@
+.home-container {
+  position: relative;
+  min-height: calc(100vh - 70px); // 70px is height of the header
+  padding: 0 calc(3.5vw + 5px);
+  overflow-x: hidden;
+
+  &:before {
+    content: "";
+
+    background: url("../../../public/images/home-background.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+  }
+}

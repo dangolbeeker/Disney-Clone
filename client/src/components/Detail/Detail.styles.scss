@@ -1,0 +1,434 @@
+.details-container {
+  position: relative;
+  min-height: calc(100vh - 70px);
+  padding: 0 calc(3.5vw + 5px);
+  
+  
+  .details-background-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: all .25s ease;
+    
+    .details-background-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      opacity: 0;
+      transform: scale(2);
+      transition: all .25s ease;
+      animation: fade 4s ease .2s 1 forwards;
+    }
+
+  }
+
+  .details-content {
+    position: absolute;
+    top: 6%;
+    
+
+    .details-image-title-container {
+      width: 320px;
+      min-width: 200px;
+      margin: 30px 0;
+  
+      .details-image-title {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+
+      .go-back-button {
+        display: inline-block;
+        text-transform: uppercase;
+        font-size: 14px;
+        margin-top: 2rem;
+        color: rgb(172, 172, 172);
+        transition: all .25s ease;
+        cursor: pointer;
+
+        &:hover {
+          color: #f4f4f4;
+          transform: translateY(-1px);
+        }
+      }
+    }
+  
+    .controls-container {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+  
+  
+      .controls-button {
+        display: flex;
+        align-items: center;
+        border: none;
+        border-radius: 4px;
+        padding: 0 24px;
+        margin-right: 22px;
+        font-size: 15px;
+        text-transform: uppercase;
+        transition: all .25s ease;
+        cursor: pointer;
+      }
+  
+      .play-button {
+        height: 56px;
+        background-color: #f9f9f9;
+        letter-spacing: 1.8px;
+        color: #111;
+  
+        &:hover {
+          background-color: #c6c6c6;
+        }
+      }
+  
+      .trailer-button {
+        height: 56px;
+        background-color: #00000066;
+        border: 1px solid #f9f9f9;
+        letter-spacing: 1.8px;
+        color: #f4f4f4;
+  
+        &:hover {
+          background-color: #9999994d;
+        }
+      }
+  
+      .add-button,
+      .group-watch-button {
+        width: 44px;
+        height: 44px;
+        padding: 0 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        border: 2px solid white;
+        background-color: #00000066;
+  
+        span {
+          font-size: 30px;
+          color: white;
+        }
+      }
+
+      .add-button {
+
+        &:hover {
+          background-color: #b3b3b366;
+        }
+
+        &:active {
+          background-color: #ffffff66;
+        }
+      }
+  
+      .group-watch-button {
+        background-color: #000;
+      }
+    }
+  
+    .details-subtitle-container {
+  
+  
+      .details-subtitle {
+        color: #f4f4f4;
+        font-size: 15px;
+        min-height: 20px;
+        margin-top: 26px;
+      }
+    }
+  
+    .details-description-container {
+
+  
+      .details-tagline {
+        color: rgb(175, 175, 175);
+        font-style: italic;
+        margin: -.1rem 0;
+        font-size: 15px;
+      }
+      .details-description {
+        line-height: 1.5;
+        font-size: .94vw;
+        margin-top: 14px;
+        color: #f4f4f4;
+        max-width: 700px;
+        letter-spacing: .75px;
+      }
+    }
+
+    .trailers-container {
+      margin-top: 12vh;
+
+      .trailers-title {
+        padding-top: 1rem;
+      }
+
+      .trailers-content {
+        margin: 1.5rem 0;
+        margin-bottom: 3rem;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-gap: 1.5rem;
+
+        iframe {
+          display: block;
+          border: none;
+          width: 30vw;
+          height: 33.3vh;
+        }
+      }
+    }
+  }
+}
+
+@keyframes fade {
+  0% {opacity: 0;}
+  20% {opacity: 0;}
+  100% {
+    opacity: .31;
+    transform: scale(1);
+  }
+}
+
+@media only screen and (min-width: 2200px) {
+  .details-container {
+
+    .details-content {
+
+      .details-description-container {
+
+        .details-description {
+          max-width: 710px;
+          font-size: .8vw;
+        }
+      }
+
+      .trailers-container {
+        margin-top: 25vh;
+  
+      }
+    }
+  }
+}
+@media only screen and (max-width: 1366px) {
+  .details-container {
+
+    .details-content {
+
+
+      .details-image-title-container {
+
+        .details-image-title {
+          width: 270px;
+        }
+      }
+
+      .controls-container {
+    
+        .controls-button {
+          padding: 0 14px;
+          margin-right: 22px;
+          font-size: 12px;
+        }
+    
+        .play-button {
+          height: 46px;
+        }
+    
+        .trailer-button {
+          height: 46px;
+        }
+    
+        .add-button,
+        .group-watch-button {
+          width: 40px;
+          height: 40px;
+    
+          span {
+            font-size: 26px;
+          }
+
+          img {
+            width: 34px;
+          }
+        }
+      }
+
+      .details-description-container {
+
+        .details-description {
+          font-size: 1.1vw;
+          max-width: 520px;
+        }
+      }
+
+      .trailers-container {
+        margin-top: 12vh;
+  
+
+        .trailers-content {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          grid-gap: 1.5rem;
+  
+          iframe {
+            display: block;
+            border: none;
+            width: 40vw;
+            height: 40vh;
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .details-container {
+
+
+    .details-content {
+
+
+      .details-image-title-container {
+
+        .details-image-title {
+          width: 320px;
+        }
+      }
+
+      .details-description-container {
+
+        .details-description {
+          font-size: 1.65vw;
+          max-width: 500px;
+        }
+      }
+
+      .trailers-container {
+        margin-top: 20vh;
+        padding-bottom: 5rem;
+  
+
+        .trailers-content {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          grid-gap: 2rem;
+  
+          iframe {
+            display: block;
+            border: none;
+            width: 44vw;
+            height: 18.6vh;
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 768px) {
+  .details-container {
+
+    .details-background-container {
+      bottom: 69px;
+    }
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .details-container {
+
+
+    .details-background-container {
+      bottom: 59px;
+    }
+
+    .details-content {
+
+
+      .details-image-title-container {
+
+        .details-image-title {
+          width: 220px;
+        }
+
+        .go-back-button {
+          display: block;
+          width: fit-content;
+        }
+      }
+
+      .controls-container {
+    
+        .controls-button {
+          padding: 0 6px;
+          margin-right: 22px;
+          font-size: 11px;
+        }
+    
+        .play-button,
+        .trailer-button {
+          height: 36px;
+
+          img {
+            width: 24px;
+          }
+        }
+    
+        .add-button,
+        .group-watch-button {
+          width: 34px;
+          height: 34px;
+    
+          span {
+            font-size: 24px;
+          }
+
+          img {
+            width: 28px;
+          }
+        }
+      }
+
+      .details-subtitle-container {
+  
+  
+        .details-subtitle {
+          font-size: 12px;
+        }
+      }
+
+      .details-description-container {
+
+        .details-description {
+          font-size: 3vw;
+          max-width: 80vw;
+        }
+      }
+
+      .trailers-container {
+        margin-top: 20vh;
+  
+
+        .trailers-content {
+          grid-template-columns: repeat(1, minmax(0, 1fr));
+          grid-gap: 1rem;
+  
+          iframe {
+            display: block;
+            border: none;
+            width: 90vw;
+            height: 30vh;
+          }
+        }
+      }
+    }
+  }
+}

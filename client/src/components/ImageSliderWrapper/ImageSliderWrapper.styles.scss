@@ -1,0 +1,117 @@
+.image-wrapper {
+  position: relative;
+
+  .image-wrapper-info {
+    position: absolute;
+    bottom: 1rem;
+    left: -5%;
+
+    opacity: 0;
+    visibility: hidden;
+
+    background-color: #1b1b1b80;
+    backdrop-filter: blur(4px);
+    width: 20.5vw;
+    padding: 20px;
+    border-radius: 4px;
+    transition: all .25s ease;
+    z-index: 0;
+    pointer-events: none;
+
+
+    .image-wrapper-title {
+      margin: 0;
+      font-size: 1.1vw;
+    }
+
+    .image-wrapper-overview {
+      letter-spacing: 1px;
+      line-height: 1.5;
+      font-size: .8vw;
+    }
+  }
+
+  &:hover .image-wrapper-info {
+    opacity: 1;
+    visibility: visible;
+    left: 2rem;
+  }
+}
+
+@media only screen and (min-width: 2200px) {
+  .image-wrapper {
+
+    .image-wrapper-info {
+      width: 20vw;
+    }
+  }
+}
+
+@media only screen and (max-width: 1366px) {
+  .image-wrapper {
+
+    .image-wrapper-info {
+      
+      .image-wrapper-title {
+        font-size: 1.15vw;
+      }
+  
+      .image-wrapper-overview {
+        font-size: .875vw;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .image-wrapper {
+
+    .image-wrapper-info {
+      width: 25vw;
+      
+      .image-wrapper-title {
+        font-size: 1.4vw;
+      }
+  
+      .image-wrapper-overview {
+        font-size: 1.2vw;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .image-wrapper {
+
+    .image-wrapper-info {
+      width: 50vw;
+      
+      .image-wrapper-title {
+        font-size: 1.65vw;
+      }
+  
+      .image-wrapper-overview {
+        font-size: 1.4vw;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .image-wrapper {
+
+    .image-wrapper-info {
+      width: 60vw;
+      bottom: .6rem;
+      left: 6% !important;
+      
+      .image-wrapper-title {
+        font-size: 2.4vw;
+      }
+  
+      .image-wrapper-overview {
+        font-size: 2.2vw;
+      }
+    }
+  }
+}

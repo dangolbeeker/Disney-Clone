@@ -1,7 +1,7 @@
 import { configureStore } from '@reduxjs/toolkit'
-import userReducer from './user/UserReducer';
-import moviesReducer from './movies/MoviesReducer';
-import showcaseReducer from './showcase/ShowcaseReducer';
+import userReducer from './user/userReducer';
+import moviesReducer from './movies/moviesReducer';
+import showcaseReducer from './showcase/showcaseReducer';
 
 const store = configureStore({
   reducer: {

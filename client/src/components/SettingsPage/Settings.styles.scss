@@ -1,0 +1,197 @@
+.settings-page-container {
+  min-height: calc(100vh - 70px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .settings-content {
+    background-color: rgba(245, 245, 245, 0.095);
+    padding: 30px;
+    width: 600px;
+    border-radius: 6px;
+    margin: 2rem 0;
+    
+
+    .settings-user-profiles {
+      display: flex;
+      justify-content: space-between;
+      width: 250px;
+      margin: 0 auto;
+
+      .user-image-name-container {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+
+        .user-image {
+          width: 100px;
+          border-radius: 50%;
+          border: 2px solid #f4f4f4;
+        }
+        .user-name {
+          padding-top: .1rem;
+          text-align: center;
+          max-width: 100px;
+          word-wrap: break-word;
+        }
+      }
+
+      .user-add-profile {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        border: 2px solid #f4f4f4;
+        background-color: #555869;
+        transition: all .25s ease;
+        cursor: pointer;
+
+        &:hover {
+          background-color: #74788f;
+        }
+
+        .user-add-sign {
+          font-size: 36px;
+          font-weight: bold;
+          margin-bottom: .4rem;
+        }
+        .user-add-profile-text {
+          position: absolute;
+          top: 6.12rem;
+        }
+      }
+    }
+
+    .settings-title {
+      margin-top: 2rem;
+      margin-bottom: 1.4rem;
+      text-align: left;
+    }
+
+    hr {
+      background-color: rgb(145, 145, 145);
+      border: none;
+      height: 2px;
+      margin-bottom: 2rem;
+    }
+
+    .user-settings {
+      // padding: 0 30px;
+
+      .settings-label {
+        color: #e6e6e6;
+        font-size: 16px;
+        font-weight: bold;
+      }
+      
+      .username-input {
+        border: none;
+        background-color: transparent;
+        color: #f4f4f4;
+        border-bottom: 1px solid rgb(88, 88, 88);
+        margin-top: .8rem;
+        margin-bottom: 2rem;
+        padding: 4px 10px;
+        height: 40px;
+        width: 30%;
+        font-size: 16px;
+        transition: all .25s ease;
+
+        &::selection {
+          background-color: skyblue;
+          color: #111;
+        }
+        &:hover {
+          background-color: rgba(85, 88, 105, 0.06);
+        }
+        &:focus {
+          outline: none;
+          width: 100%;
+          background-color: rgba(85, 88, 105, 0.15);
+          border-bottom: 1px solid #61DAFB;
+        }
+        &::placeholder {
+          font-size: 15px;
+          
+        }
+      }
+    }
+
+    .change-image-title {
+      color: #e6e6e6;
+    }
+
+    .change-profile-image {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      grid-gap: 1.5rem;
+      justify-items: center;
+      margin-bottom: 2rem;
+
+      .change-image {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        border: 2px solid #f4f4f4;
+        cursor: pointer;
+        filter: saturate(.05);
+        transition: all .25s ease;
+
+        &:hover {
+          filter: saturate(1.2);
+        }
+      }
+    }
+  }
+
+  .logout-title {font-size: 100%;}
+  .logout-container {
+    text-align: center;
+
+    .logout-button {
+      padding: 12px 24px;
+      margin-bottom: 1rem;
+      border: none;
+      border: 1px solid #61DAFB;
+      background-color: transparent;
+      color: #f4f4f4;
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 18px;
+      transition: all .25s ease;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #61DAFB;
+        color: #111;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .settings-page-container {
+
+    .settings-content {
+      margin-bottom: 8rem;
+      width: 500px;
+      
+    }
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .settings-page-container {
+
+    .settings-content {
+      width: 380px;
+      
+    }
+  }
+}

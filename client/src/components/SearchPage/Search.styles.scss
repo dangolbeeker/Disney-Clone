@@ -1,0 +1,131 @@
+.search-page-container {
+  min-height: calc(100vh - 70px); // 70px is height of the header
+  padding-bottom: 2rem;
+
+  &:before {
+    content: "";
+
+    background: url("../../../public/images/home-background.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+  }
+  .search-form {
+    position: relative;
+
+    .search-input {
+      background: linear-gradient(180deg, rgba(75, 75, 75, 0.2) 0%, rgba(131, 131, 131, 0.2) 100%);
+      width: 100%;
+      height: 80px;
+      padding: 0 30px;
+      font-size: 40px;
+      color: #f4f4f4;
+      border: none;
+
+      &::placeholder {
+        color: #f4f4f4;
+        letter-spacing: 1px;
+      }
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    .clear-search-button {
+      position: absolute;
+      top: 1.3rem;
+      right: 1rem;
+      width: 40px;
+      filter: brightness(3);
+      cursor: pointer;
+      transition: all .24s ease;
+
+      &:hover {
+        filter: brightness(2.2);
+      }
+    }
+  }
+
+  .search-results-container {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    grid-gap: 1rem;
+
+    margin-top: 1.4rem;
+    padding: 0 25px;
+  }
+}
+
+@media only screen and (max-width: 1366px) {
+  .search-page-container {
+
+    .search-form {
+  
+      .search-input {
+        font-size: 30px;
+  
+        &::placeholder {
+          color: #f4f4f4;
+          letter-spacing: 1px;
+        }
+      }
+  
+      .clear-search-button {
+        top: 1.5rem;
+        right: 1rem;
+        width: 33px;
+      }
+    }
+
+    .search-results-container {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .search-page-container {
+
+    .search-results-container {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .search-page-container {
+    padding-bottom: 7rem;
+
+    .search-form {
+  
+      .search-input {
+        font-size: 18px;
+        height: 50px;
+  
+        &::placeholder {
+          color: #f4f4f4;
+          letter-spacing: 1px;
+        }
+      }
+  
+      .clear-search-button {
+        top: .92rem;
+        right: 1rem;
+        width: 22px;
+      }
+    }
+
+    .search-results-container {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+}

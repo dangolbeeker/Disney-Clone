@@ -1,0 +1,15 @@
+.error-page-container {
+  position: relative;
+  height: 100vh;
+
+  .error-page-message {
+    font-size: 40px;
+    position: absolute;
+    left: 10%;
+    top: 10%;
+
+    .error-page-path {
+      color: skyblue;
+    }
+  }
+}

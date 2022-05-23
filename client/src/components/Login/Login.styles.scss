@@ -1,0 +1,115 @@
+.login-page-container {
+  position: relative;
+  height: calc(100vh - 70px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0.8;
+
+    background: url('../../../public/images/login-background.jpg');
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    background-attachment: fixed;
+
+    z-index: -1;
+  }
+
+  .login-content-cta {
+    max-width: 650px;
+    padding: 80px 20px;
+    margin-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+
+
+    .login-logo {
+      width: 100%;
+    }
+
+    .sign-up {
+
+
+      button {
+        width: 100%;
+        border: none;
+        border-radius: 4px;
+        background-color: #0063e5;
+        color: #f4f4f4;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 18px;
+        text-align: center;
+        padding: 17px 0;
+        margin-top: 8px;
+        margin-bottom: 12px;
+        transition: all .25s ease;
+        letter-spacing: 1.5px;
+        cursor: pointer;
+
+        &:hover {
+          background-color: #0483ee;
+        }
+      }
+
+      .guest-login-button {
+        background-color: #888888;
+
+        &:hover {
+          background-color: #727272;
+        }
+      }
+
+      .sign-up-description {
+        font-size: 11px;
+        letter-spacing: 1.5px;
+        line-height: 1.5;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 2200px) {
+  .login-page-container {
+
+    .login-content-cta {
+      margin-bottom: 180px;
+      transform: scale(1.1);
+    }
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .login-page-container {
+
+    .login-content-cta {
+      margin-bottom: 100px;
+      transform: scale(.95);
+
+      .sign-up {
+
+        button {
+          width: 100%;
+          font-size: 16px;
+          padding: 15px 0;
+        }
+  
+        .sign-up-description {
+          font-size: 13px;
+        }
+      }
+    }
+  }
+}

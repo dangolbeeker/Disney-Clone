@@ -1,0 +1,103 @@
+.watchlist-page-container {
+  padding: 0 60px;
+
+  .watchlist-title {
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin: 2rem 0;
+  }
+
+  .watchlist-content {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+
+    .watchlist-movie-wrapper {
+      position: relative;
+
+      &:hover .remove-watchlist-item{
+        top: 2rem;
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .remove-watchlist-item {
+        position: absolute;
+        top: -1rem;
+        right: 1.4rem;
+
+        width: 2.5vw;
+        height: 2.5vw;
+        border: 2px solid transparent;
+        border-radius: 50%;
+        z-index: 1;
+        opacity: 0;
+        visibility: hidden;
+        transition: all .25s ease;
+
+        &:hover {
+          border: 2px solid #afafaf;
+        }
+        &:active {
+          border: 2px solid white;
+        }
+
+
+        .remove-watchlist-item-button {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          filter: invert(23%) sepia(67%) saturate(5175%) hue-rotate(351deg) brightness(113%) contrast(100%);
+          transition: all .3s ease;
+          cursor: pointer;
+
+          &:hover {
+            transform: rotate(180deg);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .watchlist-page-container {
+    padding-bottom: 6rem;
+
+    .watchlist-content {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+
+      .watchlist-movie-wrapper {
+
+        .remove-watchlist-item {
+          top: -1rem;
+          right: 1.4rem;
+    
+          width: 3.4vw;
+          height: 3.4vw;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .watchlist-page-container {
+  
+    .watchlist-content {
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+      grid-gap: .5rem;
+
+      .watchlist-movie-wrapper {
+
+        .remove-watchlist-item {
+          top: 1rem !important;
+          right: .65rem;
+    
+          width: 5.2vw;
+          height: 5.2vw;
+        }
+      }
+    }
+  }
+}

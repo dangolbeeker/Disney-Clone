@@ -1,0 +1,128 @@
+.showcase-page-container {
+  position: relative;
+  height: calc(100vh - 70px);
+  padding: 0 30px;
+
+  .disneyBG {top: -20rem;}
+
+  .pixarBG {top: -10rem;}
+
+  .marvelBG {top: 0rem;}
+
+  .starwarsBG {top: -11rem;}
+
+  .nationalBG {}
+
+  .foxBG {}
+
+  .showcase-bg {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+
+    .bg-video {
+      width: 100%;
+    }
+
+  }
+
+  .showcase-movies {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    margin-top: 60vh;
+    padding-bottom: 2rem;
+  }
+}
+
+@media only screen and (min-width: 2200px) {
+  .showcase-page-container {
+
+    .pixarBG {top: -12rem;}
+
+    .starwarsBG {top: -15rem;}
+    
+    .foxBG {top: -7.4rem;}
+
+    .showcase-movies {
+      margin-top: 68vh;
+    }
+  }
+}
+
+@media only screen and (max-width: 1366px) {
+  .showcase-page-container {
+
+  .disneyBG {top: -11rem;}
+
+  .pixarBG {top: -6rem;}
+
+  .marvelBG {top: 0rem;}
+
+  .starwarsBG {top: -6.6rem;}
+
+  .nationalBG {}
+
+  .foxBG {top: -1.95rem;}
+
+    .showcase-movies {
+      margin-top: 60vh;
+    }
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .showcase-page-container {
+
+  .disneyBG {top: 0rem;}
+
+  .pixarBG {top: 0rem;}
+
+  .marvelBG {top: 4.4rem;}
+
+  .starwarsBG {top: 1rem;}
+
+  .nationalBG {top: 70px;}
+
+  .foxBG {top: -10px;}
+
+    .showcase-movies {
+      margin-top: 35vh;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .showcase-page-container {
+
+    .showcase-movies {
+      margin-top: 35vh;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .showcase-page-container {
+
+  .disneyBG {top: 70px;}
+
+  .pixarBG {top: 70px;}
+
+  .marvelBG {top: 4.4rem;}
+
+  .starwarsBG {top: 2rem;}
+
+  .nationalBG {top: 70px;}
+
+  .foxBG {top: 2.5rem;}
+
+    .showcase-movies {
+      margin-top: 30vh;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      padding-bottom: 6rem;
+    }
+  }
+}
