@@ -12,7 +12,7 @@ root.render(
   
     <React.StrictMode>
     <Provider store={store}>
-      <Router basename='/disneyplusclonex'>
+      <Router basename='/Disney-Clone'>
         <App />
       </Router>
     </Provider>

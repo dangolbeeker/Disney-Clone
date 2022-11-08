@@ -1,7 +1,7 @@
 {
   "name": "client",
   "version": "0.1.0",
-  "homepage": "https://dangolbeeker.github.io/disneyplusclonex",
+  "homepage": "https://dangolbeeker.github.io/Disney-Clone/",
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.1",
