@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/disneyplusclonex/static/css/main.89ba873d.css",
+    "main.js": "/disneyplusclonex/static/js/main.6cacf5c2.js",
+    "static/js/787.c4e7f8f9.chunk.js": "/disneyplusclonex/static/js/787.c4e7f8f9.chunk.js",
+    "static/media/login-background.jpg": "/disneyplusclonex/static/media/login-background.05b1a1b3088cbb458939.jpg",
+    "static/media/home-background.png": "/disneyplusclonex/static/media/home-background.a0c4bdd961442f1bc8b1.png",
+    "static/media/slick.svg": "/disneyplusclonex/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/disneyplusclonex/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/disneyplusclonex/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/disneyplusclonex/static/media/slick.295183786cd8a1389865.woff",
+    "index.html": "/disneyplusclonex/index.html",
+    "main.89ba873d.css.map": "/disneyplusclonex/static/css/main.89ba873d.css.map",
+    "main.6cacf5c2.js.map": "/disneyplusclonex/static/js/main.6cacf5c2.js.map",
+    "787.c4e7f8f9.chunk.js.map": "/disneyplusclonex/static/js/787.c4e7f8f9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.89ba873d.css",
+    "static/js/main.6cacf5c2.js"
+  ]
+}
